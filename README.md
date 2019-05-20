@@ -11,5 +11,5 @@ main/res/values/strings.xml --> this is where I added my strings.
 
 
 
-Also note: I have created a file called notes.txt. It contains a lot of lessons that I have learned to build Android applications. If you need any information, this is where you should start to look.
+Also note: I have created a file called notes.txt in "main/java/com/example/jdvelhapp/notes.txt". It contains a lot of lessons that I have learned to build Android applications. If you need any information, this is where you should start to look.
 This main folder is the same folder as the one you can find on Android Studio (app/src/main). I just copied that folder here.
