@@ -1,0 +1,44 @@
+In case you dont remember: You have to launch android studio with root privileges! Otherwise you
+wont be able to access some features of android studio.
+
+Launch android studio by getting in as root with "su -", then do "android-studio"
+
+To add objects easily to your application, go to your activity_main.xml file.
+Select the Design view of the file.
+
+Right click on some type of object to add it to the view. Drag and drop it where you want. Its
+parameters will show on the right side of the screen.
+
+if you get an error about "View not constrained", right click on your elements and go to "Constrain"
+then add a constraint horizontally and vertically. Otherwise, at runtime, all objects will be at 0,0.
+
+I added a library in the build.gradle (Module: app) file. This makes the text adapt to the screen
+resolution. The only thing you have to do to make it work is: instead of putting values in dp or sp
+for margins and font sizes, you put @dimen/_Xsdp, where X is any number.
+To add the library to your project, put the line implementation 'com.intuit.sdp:sdp-android:1.0.6'
+in your dependencies in the build.gradle (Module: app) file.
+
+If you get the error "Error loading APKs", try
+https://stackoverflow.com/questions/42781934/android-error-while-installing-apks
+or build the APK from the Build > Build Bundle(s)/APK(s)
+
+In case your code takes too long to load:
+https://stackoverflow.com/questions/15963969/choreographer639-skipped-50-frames
+This is what the link says:
+Emulator is slow in almost every case. When you use a real device it may not appear the warning anymore. Anyway, that one happens when you use the UI thread too much. Possible causes are:
+
+    Loading database information on the UI thread. Use a Loader
+    Running long processes on the UI thread. Use an AsyncTaskLoader
+    The emulator is just slow, as you don't overload the UI thread. Try your code on a real device or follow the guidelines here and here
+    There is a lot to do onCreate: set the activity with configChanges
+
+It might also be because you are loading an image. Try loading the image in a thread.
+
+If you cannot find your application when running your emulator (if your application does not load
+instantly), check your console for any errors.
+
+I do not know if this can help; my application was very slow. I decided to restart my computer.
+After I did, I found every location where a different activity was being loaded and added the
+method "finish()" after to remove the activity that was done being used. This may help make the
+application faster.
+

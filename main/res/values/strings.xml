@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">JDVELH app</string>
+    <string name="title">Labyrinth game</string>
+    <string name="descriptionGame">Survive Through the Labyrinth!</string>
+    <string name="buttonStartGame">Next</string>
+    <string name="attack">Attack</string>
+    <string name="up">UP</string>
+    <string name="down">DOWN</string>
+    <string name="left">LEFT</string>
+    <string name="right">RIGHT</string>
+    <string name="defaultTextDescriptionPage">DescriptionX</string>
+    <string name="winningMessage">Hurray! You Won!</string>
+    <string name="returnToMainPage">Return to Main Page</string>
+    <string name="losingMessage">You Lost!</string>
+</resources>
