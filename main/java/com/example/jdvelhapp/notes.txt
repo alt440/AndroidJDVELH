@@ -42,3 +42,4 @@ After I did, I found every location where a different activity was being loaded 
 method "finish()" after to remove the activity that was done being used. This may help make the
 application faster.
 
+Adding an inner class for handling onClick events is a great way for changing the values of an integer or any other data types while not making them final. It is way easier than creating a separate class, because views are instances so sharing variables taking a specific instance of the view with another class is hard.
