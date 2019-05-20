@@ -43,3 +43,20 @@ method "finish()" after to remove the activity that was done being used. This ma
 application faster.
 
 Adding an inner class for handling onClick events is a great way for changing the values of an integer or any other data types while not making them final. It is way easier than creating a separate class, because views are instances so sharing variables taking a specific instance of the view with another class is hard.
+
+This is what I did to make Android Studio faster:
+Disable VCS by File > Settings > Plugins and disable the following things : CVS Integration; Git Integration; GitHub; Google Cloud ... things; Subversion Integration; hg4idea; 
+Then do: 
+1) in AndroidStudio's settings > compile enable checkbox named Compile independent modules in parallel.
+
+2) Under Help> Edit Custom VM Options I have:
+
+-Xms1024m 
+-Xmx4096m # <------ increase this to most of your RAM 
+-XX:MaxPermSize=1024m 
+-XX:ReservedCodeCacheSize=440m 
+-XX:+UseCompressedOops 
+-XX:-HeapDumpOnOutOfMemoryError 
+-Dfile.encoding=UTF-8
+
+Found on https://stackoverflow.com/questions/30817871/android-studio-is-slow-how-to-speed-up
